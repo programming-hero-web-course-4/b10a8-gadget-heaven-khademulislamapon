@@ -1,0 +1,222 @@
+[
+    {
+        "product_id": "1",
+        "product_title": "Laptop ABC 15.6 inch",
+        "product_image": "https://i.ibb.co.com/8MmBsHb/LAPTOP-LENOVO-TB15-CI5-1135-G7-4-GB-256-GB-15-6-INCH-DOS.png",
+        "category": "Computers",
+        "price": 799.99,
+        "description": "A powerful laptop with 16GB RAM, 512GB SSD, and Intel i7 processor.",
+        "specifications": [
+            "16GB RAM",
+            "512GB SSD",
+            "Intel i7 Processor",
+            "15.6 inch Full HD Display"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "2",
+        "product_title": "Desktop XYZ 24 inch",
+        "product_image": "https://i.ibb.co.com/gSFcgmB/24inmonitors-2048px-232071-3x2-1-1.jpg",
+        "category": "Computers",
+        "price": 1199.99,
+        "description": "A high-performance desktop with a 24 inch display and a fast SSD.",
+        "specifications": [
+            "32GB RAM",
+            "1TB SSD",
+            "Intel i9 Processor",
+            "24 inch 4K Display"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "3",
+        "product_title": "Gaming Laptop Pro",
+        "product_image": "https://i.ibb.co.com/wCQnb5Z/Lenovo-Launches-New-Gaming-Laptops-with-AI-Features-in-India.webp",
+        "category": "Computers",
+        "price": 1499.99,
+        "description": "Top-tier gaming laptop with a fast GPU and high refresh rate screen.",
+        "specifications": [
+            "32GB RAM",
+            "1TB SSD",
+            "NVIDIA RTX 3080",
+            "17.3 inch 144Hz Display"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "4",
+        "product_title": "2-in-1 Convertible Laptop",
+        "product_image": "https://i.ibb.co.com/TrCLKXZ/n-Qk8-Y5-Qykafztg-PUZoc-CGH.jpg",
+        "category": "Computers",
+        "price": 849.99,
+        "description": "A versatile laptop that doubles as a tablet with a touchscreen.",
+        "specifications": [
+            "8GB RAM",
+            "256GB SSD",
+            "Intel i5 Processor",
+            "13.3 inch Touchscreen"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": "5",
+        "product_title": "Ultra-thin Laptop",
+        "product_image": "https://i.ibb.co.com/QMwjSGt/71ehzr-GUO7-L-AC-SL1500.jpg",
+        "category": "Computers",
+        "price": 999.99,
+        "description": "A sleek and light laptop with long battery life and powerful specs.",
+        "specifications": [
+            "16GB RAM",
+            "512GB SSD",
+            "Intel i7 Processor",
+            "13 inch Display"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "6",
+        "product_title": "Workstation Computer",
+        "product_image": "https://i.ibb.co.com/LCztBBh/10-best-workstations.webp",
+        "category": "Computers",
+        "price": 2099.99,
+        "description": "A workstation computer with professional-grade hardware for design and engineering.",
+        "specifications": [
+            "64GB RAM",
+            "2TB SSD",
+            "Intel Xeon Processor",
+            "Dual Monitor Support"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "7",
+        "product_title": "Smartphone A1",
+        "product_image": "https://i.ibb.co.com/vJGtwT9/Redmi-A1-Light-Green-3358.jpg",
+        "category": "Phones",
+        "price": 799.99,
+        "description": "A high-end smartphone with a large OLED display and fast performance.",
+        "specifications": [
+            "128GB Storage",
+            "6GB RAM",
+            "OLED Display",
+            "12MP Camera"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "8",
+        "product_title": "Phone Z Pro Max",
+        "product_image": "https://i.ibb.co.com/pnbsMDL/121032-iphone-16-pro-max.png",
+        "category": "Phones",
+        "price": 1099.99,
+        "description": "A premium phone with top-of-the-line specs and an excellent camera.",
+        "specifications": [
+            "256GB Storage",
+            "8GB RAM",
+            "OLED Display",
+            "50MP Camera"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "9",
+        "product_title": "Smart Watch S4",
+        "product_image": "https://i.ibb.co.com/b5RK8fr/81-TZFjbq-D0-L.jpg",
+        "category": "Smart Watches",
+        "price": 199.99,
+        "description": "A smartwatch with fitness tracking and heart-rate monitoring.",
+        "specifications": [
+            "Heart Rate Monitor",
+            "GPS",
+            "Waterproof",
+            "Bluetooth Connectivity"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": "10",
+        "product_title": "Sporty Smart Watch",
+        "product_image": "https://i.ibb.co.com/C2JMYTk/90206-AP01-1.webp",
+        "category": "Smart Watches",
+        "price": 299.99,
+        "description": "A durable smartwatch built for outdoor activities and sports.",
+        "specifications": [
+            "Fitness Tracker",
+            "GPS",
+            "Blood Oxygen Sensor",
+            "Long Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "11",
+        "product_title": "Quick Charge Wall Charger",
+        "product_image": "https://i.ibb.co.com/2k0yfkf/original-charger-33w-soniccharge-2-0-for-redmi-note-9-9-prime-original-imagm2exgez6qjfh.webp",
+        "category": "Chargers",
+        "price": 59.99,
+        "description": "A wall charger with fast-charging capabilities for your devices.",
+        "specifications": [
+            "Fast Charging",
+            "USB-C Port",
+            "Compact Design"
+        ],
+        "availability": true,
+        "rating": 4.2
+    },
+    {
+        "product_id": "12",
+        "product_title": "Wireless Charging Pad",
+        "product_image": "https://i.ibb.co.com/8X22Tqq/md.webp",
+        "category": "Chargers",
+        "price": 50.99,
+        "description": "A wireless charging pad for quick charging without the cables.",
+        "specifications": [
+            "Qi Wireless Charging",
+            "Compact Design",
+            "Overheat Protection"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": "13",
+        "product_title": "Portable Power Bank 10000mAh",
+        "product_image": "https://i.ibb.co.com/1nLdMJ1/0041424-anker-225w-10000mah-power-bank-with-type-c-cable-a1388h11-600.jpg",
+        "category": "Power Banks",
+        "price": 59.99,
+        "description": "A portable power bank with a 10000mAh capacity, perfect for charging on the go.",
+        "specifications": [
+            "10000mAh Capacity",
+            "Dual USB Output",
+            "Compact Design"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "14",
+        "product_title": "SuperCharge Power Bank 20000mAh",
+        "product_image": "https://i.ibb.co.com/JQJp7Fx/Joyroom-JR-T014-1.png",
+        "category": "Power Banks",
+        "price": 89.99,
+        "description": "A high-capacity power bank with quick charge capabilities for multiple devices.",
+        "specifications": [
+            "20000mAh Capacity",
+            "USB-C Charging",
+            "Quick Charge 3.0"
+        ],
+        "availability": true,
+        "rating": 4.8
+    }
+]
