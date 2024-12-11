@@ -2,7 +2,7 @@
 import { useState } from "react";
 import BodyDashboard from "../BodyDashboard/BodyDashboard";
 
-const HeroDashboard = ({products, wishLists, handleremoveWishLists, handleRemoveProductLists, handleSort, calculateTotalPrice, handleClear, reload, setReload}) => {
+const HeroDashboard = ({products, wishLists, handleremoveWishLists, handleRemoveProductLists, handleSort, calculateTotalPrice, handleClear, reload, setReload, handlePurchase}) => {
     const [isActive, setIsActive] = useState("cart");
 
     const handleTabClick = (tab) => {
@@ -22,7 +22,7 @@ const HeroDashboard = ({products, wishLists, handleremoveWishLists, handleRemove
                 </div>
             </div >
 
-            <BodyDashboard isActive={isActive} products={products} wishLists={wishLists} handleremoveWishLists={handleremoveWishLists} handleRemoveProductLists={handleRemoveProductLists} handleSort={handleSort} calculateTotalPrice={calculateTotalPrice} handleClear={handleClear} reload={reload} setReload={setReload} />
+            <BodyDashboard isActive={isActive} products={products} wishLists={wishLists} handleremoveWishLists={handleremoveWishLists} handleRemoveProductLists={handleRemoveProductLists} handleSort={handleSort} calculateTotalPrice={calculateTotalPrice} handleClear={handleClear} reload={reload} setReload={setReload} handlePurchase={handlePurchase} />
         </>
     );
 };

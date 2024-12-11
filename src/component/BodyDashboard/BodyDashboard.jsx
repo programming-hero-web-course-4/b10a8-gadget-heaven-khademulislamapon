@@ -4,8 +4,13 @@ import DashboardCart from "../DashboardCart/DashboardCart";
 import DashboardWishlist from "../DashboardWishlist/DashboardWishlist";
 import btnIcon from "../../assets/Frame.png"
 import groupIcon from "../../assets/Group.png"
+import { useState } from "react";
 
-const BodyDashboard = ({ isActive, products, wishLists, handleremoveWishLists, handleRemoveProductLists, handleSort, calculateTotalPrice, handleClear, reload, setReload }) => {
+const BodyDashboard = ({ isActive, products, wishLists, handleremoveWishLists, handleRemoveProductLists, handleSort, calculateTotalPrice, handleClear, reload, setReload, handlePurchase }) => {
+    const [purchased, setPurchased] = useState(false);    
+    const toggleDisabled = () => {
+        setPurchased(!purchased)
+    }
 
     return (
         <div className="my-12 mb-24 w-11/12 mx-auto">
@@ -15,14 +20,14 @@ const BodyDashboard = ({ isActive, products, wishLists, handleremoveWishLists, h
                         <h2 className="font-bold text-[#0B0B0B] text-2xl">Cart</h2>
                         <div className="flex items-center gap-4">
                             <h3 className="mr-2 font-bold text-[#0B0B0B] text-2xl">Total cost: $ {calculateTotalPrice()}</h3>
-                            <button onClick={handleSort} className="py-3 px-5 font-bold text-lg rounded-[32px] bg-white text-[#9538E2] flex items-center border-2 border-[#9538E2]">
+                            <button disabled={purchased} onClick={() => { handleSort(); }} className={`py-3 px-5 font-bold text-lg rounded-[32px] flex items-center ${purchased ? 'text-gray-400 bg-gray-300' : 'bg-white text-[#9538E2] border-2 border-[#9538E2]'}`}>
                                 <p>Sort by Price</p>
                                 <div className="text-2xl ml-2.5">
                                     <img src={btnIcon} alt="" />
                                 </div>
                             </button>
-                            {/* document.getElementById('my_modal_5').showModal() */}
-                            <button onClick={() => document.getElementById('my_modal_5').showModal()} className="py-3 px-6 font-medium text-lg hover:text-[#9538E2] hover:bg-white rounded-[32px] bg-[#9538E2] text-white border-2 hover:border-[#9538E2]">Purchase</button>
+
+                            <button disabled={purchased} onClick={() => { handlePurchase(); toggleDisabled(); }} className={`py-3 px-6 font-medium text-lg rounded-[32px] ${purchased ? 'text-gray-400 bg-gray-300' : 'hover:text-[#9538E2] hover:bg-white bg-[#9538E2] text-white border-2 hover:border-[#9538E2]'}`} >Purchase</button>
                         </div>
 
                         {/* Open the modal using document.getElementById('ID').showModal() method */}

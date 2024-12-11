@@ -5,7 +5,6 @@ import { PiShoppingCartBold } from "react-icons/pi";
 import { FiHeart } from "react-icons/fi";
 import Star from "../../assets/starIcon.png";
 import { addToStoredProductList, addToStoredWishlistList } from "../../utility/utility";
-import { toast } from "react-toastify";
 
 const ProductDetails = () => {
     const { productId } = useParams()
@@ -21,11 +20,15 @@ const ProductDetails = () => {
 
     const handleAddToCart = (id) => {
         addToStoredProductList(id);
-        toast.success("Success!");
+        // toast.success("Item added to Cart");
     }
     const handleWishlist = (id) => {
         addToStoredWishlistList(id);
-        toast.success("This is some information.");
+        // toast.success("Item added to Wish List");
+    }
+    const [wishList, setWishList] = useState(false);
+    const toggleDisabled = () => {
+        setWishList(!wishList)
     }
 
     return (
@@ -82,7 +85,7 @@ const ProductDetails = () => {
                                 </div>
                             </button>
 
-                            <button onClick={() => handleWishlist(product_id)} className="text-[#3A3A3A] p-3 border border-gray-300 rounded-full bg-white hover:border-[#9538E2] hover:bg-[#9538E2] hover:text-white">
+                            <button disabled={wishList} onClick={() => { handleWishlist(product_id); toggleDisabled(); }} className={`p-3 rounded-full ${wishList ? 'text-gray-400 bg-gray-300' : 'hover:border-[#9538E2] hover:bg-[#9538E2] hover:text-white bg-white text-[#3A3A3A] border'}`}>
                                 <div className="text-2xl">
                                     <FiHeart />
                                 </div>

@@ -22,8 +22,6 @@ const BodyHome = ({allProducts}) => {
                     <button onClick={() => handleTabClick("smartWatches")} className={`w-full py-3.5 px-5 text-lg rounded-full ${isActive === "smartWatches" ? 'bg-[#9538E2] text-white font-extrabold' : 'font-medium text-gray-500 bg-gray-100'}`}>Smart Watches</button>
 
                     <button onClick={() => handleTabClick("chargers")} className={`w-full py-3.5 px-5 text-lg rounded-full ${isActive === "chargers" ? 'bg-[#9538E2] text-white font-extrabold' : 'font-medium text-gray-500 bg-gray-100'}`}>Chargers</button>
-
-                    <button onClick={() => handleTabClick("powerBanks")} className={`w-full py-3.5 px-5 text-lg rounded-full ${isActive === "powerBanks" ? 'bg-[#9538E2] text-white font-extrabold' : 'font-medium text-gray-500 bg-gray-100'}`}>Power Banks</button>
                 </div>
 
                 <div className="w-4/5 ">

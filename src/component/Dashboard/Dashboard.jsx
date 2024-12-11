@@ -4,7 +4,6 @@ import NavBar from "../NavBar/NavBar";
 import { useEffect, useState } from "react";
 import { getStoredProductList, getStoredWishlistList, removeAllProducts, removeProductLists, removeWishLists } from "../../utility/utility";
 import { Helmet } from "react-helmet-async";
-import { toast } from "react-toastify";
 
 const Dashboard = () => {
     const allProducts = useLoaderData();
@@ -23,7 +22,7 @@ const Dashboard = () => {
         const storedProductList = getStoredProductList();
         const productsList = allProducts.filter(product => storedProductList.includes(product.product_id));
         setProducts(productsList)
-        toast.success("Success!")
+        // toast.success("Successful remove from Cart")
     }
     const [wishLists, setWishLists] = useState([]);
     useEffect(() => {
@@ -38,7 +37,7 @@ const Dashboard = () => {
         const storedWishLists = getStoredWishlistList();
         const productsList = allProducts.filter(product => storedWishLists.includes(product.product_id));
         setWishLists(productsList)
-        toast.success("Success!")
+        // toast.success("Successful remove from Wishlist")
     }
 
     const handleSort = () => {
@@ -53,12 +52,17 @@ const Dashboard = () => {
 
         return total.toFixed(2)
     }
-    const navigate = useNavigate()
 
-    const handleClear = () => {
+    const handlePurchase = () => {
+        document.getElementById('my_modal_5').showModal();
+
         setProducts([]);
         removeAllProducts();
-        navigate("/")
+    }
+
+    const navigate = useNavigate()
+    const handleClear = () => {
+        navigate("/") 
     }
 
     return (
@@ -67,7 +71,7 @@ const Dashboard = () => {
                 <title>Dashboard</title>
             </Helmet>
             <NavBar />
-            <HeroDashboard products={products} wishLists={wishLists} handleremoveWishLists={handleremoveWishLists} handleRemoveProductLists={handleRemoveProductLists} handleSort={handleSort} calculateTotalPrice={calculateTotalPrice} handleClear={handleClear} reload={reload} setReload={setReload} />
+            <HeroDashboard products={products} wishLists={wishLists} handleremoveWishLists={handleremoveWishLists} handleRemoveProductLists={handleRemoveProductLists} handleSort={handleSort} calculateTotalPrice={calculateTotalPrice} handleClear={handleClear} reload={reload} setReload={setReload} handlePurchase={handlePurchase} />
         </div>
     );
 };

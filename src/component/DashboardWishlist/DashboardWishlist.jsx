@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
 import { TiDeleteOutline } from "react-icons/ti";
 import { addToStoredProductList } from "../../utility/utility";
-import { toast } from "react-toastify";
 
 const DashboardWishlist = ({ wish, handleremoveWishLists, reload, setReload }) => {
 
     const handleAddToCart = (id) => {
         addToStoredProductList(id);
         setReload(!reload)
-        toast.success("Success!")
+        // toast.success("Item added to Cart")
     }
 
     const { product_id, product_title, product_image, price, description } = wish;

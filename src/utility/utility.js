@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getStoredProductList = () => {
     const storedListStr = localStorage.getItem('cart')
 
@@ -18,6 +20,7 @@ const addToStoredProductList = (id) => {
         storedList.push(id)
         const storedListStr = JSON.stringify(storedList)
         localStorage.setItem('cart', storedListStr)
+        toast.success("Item added to Cart");
     }
 }
 
@@ -28,6 +31,7 @@ const removeProductLists = (id) => {
 
     const storedListStr = JSON.stringify(remaining)
     localStorage.setItem('cart', storedListStr)
+    toast.success("Successful remove from Cart")
 }
 
 const removeAllProducts = () => {
@@ -54,6 +58,7 @@ const addToStoredWishlistList = (id) => {
         storedList.push(id)
         const storedListStr = JSON.stringify(storedList)
         localStorage.setItem('wishlist', storedListStr)
+        toast.success("Item added to Wish List");
     }
 }
 
@@ -64,6 +69,7 @@ const removeWishLists = (id) => {
 
     const storedListStr = JSON.stringify(remaining)
     localStorage.setItem('wishlist', storedListStr)
+    toast.success("Successful remove from Wishlist")
 }
 
 export { getStoredProductList, addToStoredProductList, getStoredWishlistList, addToStoredWishlistList, removeProductLists, removeWishLists, removeAllProducts }
