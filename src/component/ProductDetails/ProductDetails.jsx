@@ -22,12 +22,10 @@ const ProductDetails = () => {
         addToStoredProductList(id);
         // toast.success("Item added to Cart");
     }
+    const [wishList, setWishList] = useState(false);
     const handleWishlist = (id) => {
         addToStoredWishlistList(id);
         // toast.success("Item added to Wish List");
-    }
-    const [wishList, setWishList] = useState(false);
-    const toggleDisabled = () => {
         setWishList(!wishList)
     }
 
@@ -84,8 +82,7 @@ const ProductDetails = () => {
                                     <PiShoppingCartBold />
                                 </div>
                             </button>
-
-                            <button disabled={wishList} onClick={() => { handleWishlist(product_id); toggleDisabled(); }} className={`p-3 rounded-full ${wishList ? 'text-gray-400 bg-gray-300' : 'hover:border-[#9538E2] hover:bg-[#9538E2] hover:text-white bg-white text-[#3A3A3A] border'}`}>
+                            <button disabled={wishList} onClick={() => { handleWishlist(product_id); }} className={`p-3 rounded-full ${wishList ? 'text-gray-400 bg-gray-300' : 'hover:border-[#9538E2] hover:bg-[#9538E2] hover:text-white bg-white text-[#3A3A3A] border'}`}>
                                 <div className="text-2xl">
                                     <FiHeart />
                                 </div>

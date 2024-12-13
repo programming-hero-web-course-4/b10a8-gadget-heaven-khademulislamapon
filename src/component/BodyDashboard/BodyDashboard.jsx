@@ -4,13 +4,17 @@ import DashboardCart from "../DashboardCart/DashboardCart";
 import DashboardWishlist from "../DashboardWishlist/DashboardWishlist";
 import btnIcon from "../../assets/Frame.png"
 import groupIcon from "../../assets/Group.png"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const BodyDashboard = ({ isActive, products, wishLists, handleremoveWishLists, handleRemoveProductLists, handleSort, calculateTotalPrice, handleClear, reload, setReload, handlePurchase }) => {
-    const [purchased, setPurchased] = useState(false);    
-    const toggleDisabled = () => {
-        setPurchased(!purchased)
-    }
+    const [purchased, setPurchased] = useState(false);
+    useEffect(() => {
+        if(products.length === 0) {
+            setPurchased(true)
+        } else {
+            setPurchased(false)
+        }
+    }, [products.length])
 
     return (
         <div className="my-12 mb-24 w-11/12 mx-auto">
@@ -26,8 +30,7 @@ const BodyDashboard = ({ isActive, products, wishLists, handleremoveWishLists, h
                                     <img src={btnIcon} alt="" />
                                 </div>
                             </button>
-
-                            <button disabled={purchased} onClick={() => { handlePurchase(); toggleDisabled(); }} className={`py-3 px-6 font-medium text-lg rounded-[32px] ${purchased ? 'text-gray-400 bg-gray-300' : 'hover:text-[#9538E2] hover:bg-white bg-[#9538E2] text-white border-2 hover:border-[#9538E2]'}`} >Purchase</button>
+                            <button disabled={purchased} onClick={() => { handlePurchase(); }} className={`py-3 px-6 font-medium text-lg rounded-[32px] ${purchased ? 'text-gray-400 bg-gray-300' : 'hover:text-[#9538E2] hover:bg-white bg-[#9538E2] text-white border-2 hover:border-[#9538E2]'}`} >Purchase</button>
                         </div>
 
                         {/* Open the modal using document.getElementById('ID').showModal() method */}
