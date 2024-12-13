@@ -5,6 +5,7 @@ import { PiShoppingCartBold } from "react-icons/pi";
 import { FiHeart } from "react-icons/fi";
 import Star from "../../assets/starIcon.png";
 import { addToStoredProductList, addToStoredWishlistList } from "../../utility/utility";
+import { Helmet } from "react-helmet-async";
 
 const ProductDetails = () => {
     const { productId } = useParams()
@@ -31,6 +32,9 @@ const ProductDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Product Details</title>
+            </Helmet>
             <NavBar />
 
             <div className="relative">
